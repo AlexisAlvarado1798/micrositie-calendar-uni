@@ -1,1 +1,31 @@
-<p>login works!</p>
+<div class="flex flex-column-reverse">
+  <div class="flex align-items-center justify-content-center border-round m-2">
+    <p-card [style]="{ width: '360px' }">
+      <ng-template pTemplate="header">
+        <div class="flex align-content-center justify-content-center">
+          <h1>Inicio de Sesión</h1>
+        </div>
+        <div class="flex align-content-center justify-content-center">
+          <h2>Bienvenido</h2>
+        </div>
+      </ng-template>
+
+      <div class="flex align-content-center justify-content-center">
+        <input type="text" pInputText placeholder="Usuario" />
+      </div>
+      <br>
+      <div class="flex align-content-center justify-content-center">
+        <input type="text" pInputText placeholder="Contraseña" />
+      </div>
+
+      <ng-template pTemplate="footer">
+        <div class="flex align-content-center justify-content-center">
+          <p-button label="Iniciar Sesion" icon="pi pi-check"></p-button>
+        </div>
+      </ng-template>
+    </p-card>
+  </div>
+
+
+</div>
+

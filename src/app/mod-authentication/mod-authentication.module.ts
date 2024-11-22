@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ModAuthenticationRoutingModule } from './mod-authentication-routing.module';
 import { LoginComponent } from './login/login.component';
+import {ModCoreModule} from "../mod-core/mod-core.module";
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
-    ModAuthenticationRoutingModule
+    ModAuthenticationRoutingModule,
+    ModCoreModule
   ]
 })
 export class ModAuthenticationModule { }
