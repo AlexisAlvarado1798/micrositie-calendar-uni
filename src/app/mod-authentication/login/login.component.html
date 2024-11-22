@@ -1,3 +1,4 @@
+<p-toast position="top-right"></p-toast>
 <div class="flex flex-column-reverse">
   <div class="flex align-items-center justify-content-center border-round m-2">
     <p-card [style]="{ width: '360px' }">
@@ -9,18 +10,40 @@
           <h2>Bienvenido</h2>
         </div>
       </ng-template>
+      <form [formGroup]="loginFormGroup">
 
-      <div class="flex align-content-center justify-content-center">
-        <input type="text" pInputText placeholder="Usuario" />
-      </div>
-      <br>
-      <div class="flex align-content-center justify-content-center">
-        <input type="text" pInputText placeholder="Contraseña" />
-      </div>
+        <div class="flex align-content-center justify-content-center">
+          <input type="text" pInputText placeholder="Usuario" formControlName="username" id="username"/>
+        </div>
+
+        <div class="flex p-error align-content-center justify-content-center"
+             *ngIf="form['username'].errors && form['username'].touched">
+          <div *ngIf="form['username'].errors?.['required']">
+            Se debe ingresar un usuario
+          </div>
+          <div *ngIf="form['username'].errors?.['pattern']">
+            Se debe ingresar un correo valido
+          </div>
+        </div>
+
+        <br>
+
+        <div class="flex align-content-center justify-content-center">
+          <input type="text" pInputText placeholder="Contraseña" formControlName="password" id="password"/>
+        </div>
+
+        <div class="flex p-error align-content-center justify-content-center"
+             *ngIf="form['password'].errors && form['password'].touched">
+          <div *ngIf="form['password'].errors?.['required']">
+            Se debe ingresar una contraseña
+          </div>
+        </div>
+
+      </form>
 
       <ng-template pTemplate="footer">
         <div class="flex align-content-center justify-content-center">
-          <p-button label="Iniciar Sesion" icon="pi pi-check"></p-button>
+          <p-button label="Iniciar Sesion" icon="pi pi-check" (onClick)="login()"></p-button>
         </div>
       </ng-template>
     </p-card>

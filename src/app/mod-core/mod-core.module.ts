@@ -3,6 +3,11 @@ import { CommonModule } from '@angular/common';
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {ToastModule} from "primeng/toast";
+import {MessageModule} from "primeng/message";
+import {MessagesModule} from "primeng/messages";
 
 
 
@@ -12,11 +17,23 @@ import {InputTextModule} from "primeng/inputtext";
     CommonModule,
     CardModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    ToastModule,
+    MessageModule,
+    MessagesModule
   ], exports: [
     CardModule,
     ButtonModule,
-    InputTextModule
+    InputTextModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
+    ToastModule,
+    MessageModule,
+    MessagesModule
   ]
 })
 export class ModCoreModule { }
