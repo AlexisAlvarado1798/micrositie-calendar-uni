@@ -1,0 +1,67 @@
+<p-toast position="top-right"></p-toast>
+<div class="flex shadow-1 font-bold border-round overflow-hidden " >
+  <div class="flex-none flex align-items-center justify-content-start font-bold border-round m-2 pl-6 mr-6 text-primary">
+    <p-button label="Bienvenido a Calendar Uni" [text]="true" [routerLink]="['/home']"></p-button>
+  </div>
+
+  <div class="flex flex-grow-1 align-items-center justify-content-center font-bold border-round ml-8 pl-8">
+    <p-button label="Usuarios" [text]="true" [routerLink]="['/user']"></p-button>
+  </div>
+  <div class="flex flex-grow-1 align-items-center justify-content-center font-bold border-round ml-1 pl-1">
+    <p-button label="Horarios" [text]="true"></p-button>
+  </div>
+  <div class="flex flex-grow-1 align-items-center justify-content-center font-bold border-round ml-1 pl-1">
+    <p-button label="Profesores" [text]="true"></p-button>
+  </div>
+  <div class="flex flex-grow-1 align-items-center justify-content-start font-bold border-round ml-1 pl-1">
+    <p-button label="Salones" [text]="true"></p-button>
+  </div>
+
+  <div class="flex flex-none align-items-center justify-content-end font-bold border-round ml-8 pl-1">
+    <p-button label="Ajustes" [text]="true"></p-button>
+  </div>
+  <div class="flex flex-none align-items-center justify-content-end font-bold border-round ml-1 pl-1">
+    <p-button label="Cerrar Session" [text]="true"></p-button>
+  </div>
+</div>
+
+<br>
+
+<div class="flex justify-content-center ">
+  <div class="flex align-items-center justify-content-center border-round m-2">
+    <p-card>
+      <ng-template pTemplate="header">
+        <div class="flex align-content-center justify-content-center">
+          <h1>Actualizacion del Usuario</h1>
+        </div>
+      </ng-template>
+      <form [formGroup]="editUserFormGroup">
+
+        <div class="flex align-content-center justify-content-center field grid">
+          <input type="text"
+                 pInputText placeholder="Usuario" formControlName="username" id="username"/>
+        </div>
+
+        <br>
+
+        <div class="flex align-content-center justify-content-center field grid">
+          <input type="text" pInputText placeholder="Contraseña" formControlName="password" id="password"/>
+        </div>
+        <br>
+
+        <div class="flex align-content-center justify-content-center p-col-3">
+          <p-dropdown optionLabel="name" [showClear]="true" placeholder="Estado" formControlName="status" optionValue="code" [options]="status"></p-dropdown>
+        </div>
+      </form>
+      <ng-template pTemplate="footer">
+        <div class="flex align-content-center justify-content-center pl-1">
+          <p-button label="Guardar" icon="pi pi-check" (onClick)="save()"></p-button>
+          <br>
+          <p-button label="Cancelar" icon="pi pi-check" severity="danger" class="pl-5" [routerLink]="['/user']"></p-button>
+
+        </div>
+
+      </ng-template>
+    </p-card>
+  </div>
+</div>

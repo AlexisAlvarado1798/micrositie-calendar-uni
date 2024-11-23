@@ -39,7 +39,6 @@ export class LoginComponent {
         this.messageService.add({severity: 'error', life: 10 * 500, summary: 'error', detail: 'Error al autenticarse: ' + error.error.message})
       }
     )
-
   }
 
   get form() {

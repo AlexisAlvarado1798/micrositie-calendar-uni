@@ -8,6 +8,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {ToastModule} from "primeng/toast";
 import {MessageModule} from "primeng/message";
 import {MessagesModule} from "primeng/messages";
+import {TableModule} from "primeng/table";
+import {DropdownModule} from "primeng/dropdown";
+import {ConfirmDialogModule} from "primeng/confirmdialog";
 
 
 
@@ -23,7 +26,10 @@ import {MessagesModule} from "primeng/messages";
     HttpClientModule,
     ToastModule,
     MessageModule,
-    MessagesModule
+    MessagesModule,
+    TableModule,
+    DropdownModule,
+    ConfirmDialogModule
   ], exports: [
     CardModule,
     ButtonModule,
@@ -33,7 +39,11 @@ import {MessagesModule} from "primeng/messages";
     HttpClientModule,
     ToastModule,
     MessageModule,
-    MessagesModule
+    MessagesModule,
+    TableModule,
+    DropdownModule,
+    ConfirmDialogModule
+
   ]
 })
 export class ModCoreModule { }
