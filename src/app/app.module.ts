@@ -7,6 +7,7 @@ import {ModAuthenticationModule} from "./mod-authentication/mod-authentication.m
 import {ModCoreModule} from "./mod-core/mod-core.module";
 import {MessageService} from "primeng/api";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ModHomeModule} from "./mod-home/mod-home.module";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     BrowserAnimationsModule,
     AppRoutingModule,
     ModAuthenticationModule,
-    ModCoreModule
+    ModCoreModule,
+    ModHomeModule
   ],
   providers: [MessageService],
   bootstrap: [AppComponent]

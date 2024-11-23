@@ -4,6 +4,7 @@ import {ValidatorFormConstant} from "../../mod-core/constants/ValidatorFormConst
 import {UserService} from "./service/user.service";
 import {RequestLogin} from "../../mod-core/models/RequestLogin";
 import {MessageService} from "primeng/api";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent {
 
   constructor(private formBuilder: FormBuilder,
               private userService: UserService,
-              private messageService: MessageService) {
+              private messageService: MessageService,
+              private router: Router) {
     this.loginFormGroup = this.formBuilder.group({
       username: ['', [Validators.required, Validators.pattern(ValidatorFormConstant.EMAIL)]],
       password: ['', Validators.required]
@@ -33,6 +35,7 @@ export class LoginComponent {
         this.messageService.add({severity: 'success', life: 10 * 500, summary: 'Information', detail: 'Autenticado'})
       }, error => {
         console.log("no fue posible el loguarse: ", error.error.message)
+        this.router.navigate(["home"])
         this.messageService.add({severity: 'error', life: 10 * 500, summary: 'error', detail: 'Error al autenticarse: ' + error.error.message})
       }
     )
