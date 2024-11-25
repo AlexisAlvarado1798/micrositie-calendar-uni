@@ -11,6 +11,8 @@ import {MessagesModule} from "primeng/messages";
 import {TableModule} from "primeng/table";
 import {DropdownModule} from "primeng/dropdown";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
+import {CalendarModule} from "primeng/calendar";
+import {InputNumberModule} from "primeng/inputnumber";
 
 
 
@@ -29,7 +31,9 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
     MessagesModule,
     TableModule,
     DropdownModule,
-    ConfirmDialogModule
+    ConfirmDialogModule,
+    CalendarModule,
+    InputNumberModule
   ], exports: [
     CardModule,
     ButtonModule,
@@ -42,8 +46,9 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
     MessagesModule,
     TableModule,
     DropdownModule,
-    ConfirmDialogModule
-
+    ConfirmDialogModule,
+    CalendarModule,
+    InputNumberModule
   ]
 })
 export class ModCoreModule { }

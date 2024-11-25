@@ -1,9 +1,9 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {RequestLogin} from "../../../mod-core/models/RequestLogin";
+import {RequestLogin} from "../models/RequestLogin";
 import {catchError, Observable, retry, throwError} from "rxjs";
-import {Message} from "../../../mod-core/models/Message";
-import {UserDomain} from "../../../mod-core/models/UserDomain";
+import {Message} from "../models/Message";
+import {UserDomain} from "../models/UserDomain";
 
 const  ENDPOINT_AUTHENTICATION_CALENDAR_UNI_SERVICE = "http://localhost:8080/authentication"
 const  ENDPOINT_USER_CALENDAR_UNI_SERVICE = "http://localhost:8080/user"

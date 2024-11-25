@@ -9,6 +9,8 @@ import {MessageService} from "primeng/api";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ModHomeModule} from "./mod-home/mod-home.module";
 import {ModUserModule} from "./mod-user/mod-user.module";
+import {ModScheduleModule} from "./mod-schedule/mod-schedule.module";
+import {DatePipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -21,9 +23,10 @@ import {ModUserModule} from "./mod-user/mod-user.module";
     ModAuthenticationModule,
     ModCoreModule,
     ModHomeModule,
-    ModUserModule
+    ModUserModule,
+    ModScheduleModule
   ],
-  providers: [MessageService],
+  providers: [MessageService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

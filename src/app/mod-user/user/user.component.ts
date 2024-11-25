@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {UserService} from "../../mod-authentication/login/service/user.service";
+import {UserService} from "../../mod-core/service/user.service";
 import {MessageService} from "primeng/api";
 import {UserDomain} from "../../mod-core/models/UserDomain";
 import {Router} from "@angular/router";

@@ -1,0 +1,59 @@
+<br>
+<div class="flex justify-content-center ">
+  <div class="flex align-items-center justify-content-center border-round m-2">
+    <p-card>
+      <ng-template pTemplate="header">
+        <div class="flex align-content-center justify-content-center">
+          <h1>Creacion de Clase</h1>
+        </div>
+      </ng-template>
+      <form [formGroup]="newScheduleFormGroup">
+
+        <div class="field grid">
+          <label for="starDate" class="col-fixed"  style="width:30%">Fecha Inicial</label>
+          <div class="col">
+            <p-calendar id="starDate" formControlName="starDate"  [showTime]="true"></p-calendar>
+          </div>
+        </div>
+
+        <div class="field grid">
+          <label for="time" class="col-fixed" style="width:30%">Duracion de Clase (Horas)</label>
+          <div class="col">
+            <p-inputNumber id="time" inputId="minmax" [min]="1" [max]="6" formControlName="time"> </p-inputNumber>
+          </div>
+        </div>
+
+        <div class="field grid">
+          <label for="professorId" class="col-fixed" style="width:30%">Seleccione un Profesor</label>
+          <div class="col">
+            <p-dropdown id="professorId"  [filter]="true" filterBy="fullName" [showClear]="true" optionLabel="fullName" [(ngModel)]="selectedProfessor" placeholder="Profesor" optionValue="id" formControlName="professorId" [options]="professorDomains">
+              <ng-template pTemplate="selectedItem">
+                <div class="flex align-items-center gap-2" *ngIf="selectedProfessor">
+                  <div>{{ selectedProfessor.name }}</div>
+                </div>
+              </ng-template>
+
+            </p-dropdown>
+          </div>
+        </div>
+
+        <div class="field grid">
+          <label for="userId" class="col-fixed" style="width:30%">Seleccione una Materia</label>
+          <div class="col">
+            <p-dropdown class="outline-none" id="userId" optionLabel="name" [showClear]="true" placeholder="Usuario" optionValue="code" formControlName="userId"></p-dropdown>
+          </div>
+        </div>
+
+      </form>
+      <ng-template pTemplate="footer">
+        <div class="flex align-content-center justify-content-center pl-1">
+          <p-button label="Guardar" icon="pi pi-check" (onClick)="save()"></p-button>
+          <br>
+          <p-button label="Cancelar" icon="pi pi-check" severity="danger" class="pl-5" [routerLink]="['/home']"></p-button>
+
+        </div>
+
+      </ng-template>
+    </p-card>
+  </div>
+</div>

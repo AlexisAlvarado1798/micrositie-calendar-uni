@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {ValidatorFormConstant} from "../../mod-core/constants/ValidatorFormConstant";
-import {UserService} from "./service/user.service";
+import {UserService} from "../../mod-core/service/user.service";
 import {RequestLogin} from "../../mod-core/models/RequestLogin";
 import {MessageService} from "primeng/api";
 import {Router} from "@angular/router";
