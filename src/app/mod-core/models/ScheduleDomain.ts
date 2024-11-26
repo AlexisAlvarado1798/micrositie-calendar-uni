@@ -4,5 +4,7 @@ export class ScheduleDomain {
   endDate?: string;
   professorId?: string;
   userId?: string;
+  roomId?: string;
+  universitySubjectId?: string;
 
 }

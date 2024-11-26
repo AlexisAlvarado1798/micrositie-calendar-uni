@@ -33,6 +33,7 @@ export class ModalEditComponent implements OnInit{
       { name: 'Activo', code: true },
       { name: 'Inactivo', code: false }
     ]
+
     this.user = history.state.user;
     if (!this.user) {
       // Redirige si no hay datos

@@ -13,6 +13,8 @@ import {DropdownModule} from "primeng/dropdown";
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import {CalendarModule} from "primeng/calendar";
 import {InputNumberModule} from "primeng/inputnumber";
+import {TimelineModule} from "primeng/timeline";
+import {FullCalendarModule} from "@fullcalendar/angular";
 
 
 
@@ -33,7 +35,9 @@ import {InputNumberModule} from "primeng/inputnumber";
     DropdownModule,
     ConfirmDialogModule,
     CalendarModule,
-    InputNumberModule
+    InputNumberModule,
+    TimelineModule,
+    FullCalendarModule
   ], exports: [
     CardModule,
     ButtonModule,
@@ -48,7 +52,9 @@ import {InputNumberModule} from "primeng/inputnumber";
     DropdownModule,
     ConfirmDialogModule,
     CalendarModule,
-    InputNumberModule
+    InputNumberModule,
+    TimelineModule,
+    FullCalendarModule
   ]
 })
 export class ModCoreModule { }

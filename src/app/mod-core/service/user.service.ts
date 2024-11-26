@@ -34,7 +34,6 @@ export class UserService {
 
   delete(username: string) {
     return this.httpService.delete(`${ENDPOINT_USER_CALENDAR_UNI_SERVICE  + "?username=" + username}`)
-
   }
 
 }
