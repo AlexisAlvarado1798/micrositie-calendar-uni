@@ -3,10 +3,10 @@
 <p-card>
   <ng-template pTemplate="header">
     <div class="flex align-content-center justify-content-center">
-      <h1>Gestion de Profesores</h1>
+      <h1>Gestion de Salones</h1>
     </div>
   </ng-template>
-  <p-button label="Agregar Nuevo Professor" [routerLink]="['/new-professor']" severity="success"></p-button>
+  <p-button label="Agregar Nuevo Salon" [routerLink]="['/new-room']" severity="success"></p-button>
 </p-card>
 
 <br>
@@ -14,7 +14,7 @@
 <p-card>
   <div class="card">
     <p-table
-      [value]="professorDomain"
+      [value]="roomDomains"
       [paginator]="true"
       [rows]="5"
       [showCurrentPageReport]="true"
@@ -25,21 +25,22 @@
       <ng-template pTemplate="header">
         <tr>
           <th style="width:25%">Codigo</th>
-          <th style="width:25%">Nombre y Apellido</th>
-          <th style="width:25%">Fecha de Creacion</th>
-          <th style="width:25%">Correo Electronico</th>
+          <th style="width:25%">Numero de Estudiantes</th>
+          <th style="width:25%">Descripcion</th>
           <th style="width:25%">Estado</th>
+          <th style="width:25%">Fecha de Creacion</th>
           <th style="width:25%">Acciones</th>
         </tr>
       </ng-template>
-      <ng-template pTemplate="body" let-professor>
+      <ng-template pTemplate="body" let-room>
         <tr>
-          <td>{{ professor.code }}</td>
-          <td>{{ professor.name }} {{ professor.lastname }}</td>
-          <td>{{ professor.email }}</td>
-          <td>{{ professor.creationDate }}</td>
-          <td>{{ professor.active }}</td>
-          <td><p-button label="Editar" [text]="true" ></p-button>
+          <td>{{ room.code }}</td>
+          <td>{{ room.capacity }}</td>
+          <td>{{ room.description }}</td>
+          <td>{{ room.active }}</td>
+          <td>{{ room.creationDate }}</td>
+
+          <td><p-button label="Editar" [text]="true"></p-button>
             <p-button label="Eliminar" [text]="true" severity="danger"></p-button></td>
         </tr>
       </ng-template>
@@ -47,6 +48,5 @@
   </div>
 
 </p-card>
-
 
 

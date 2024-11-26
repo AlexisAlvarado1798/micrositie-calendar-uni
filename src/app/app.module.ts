@@ -12,6 +12,9 @@ import {ModUserModule} from "./mod-user/mod-user.module";
 import {ModScheduleModule} from "./mod-schedule/mod-schedule.module";
 import {DatePipe} from "@angular/common";
 import {ModProfessorModule} from "./mod-professor/mod-professor.module";
+import {ModRoomModule} from "./mod-room/mod-room.module";
+import {ModMateriasRoutingModule} from "./mod-materias/mod-materias-routing.module";
+import {ModMateriasModule} from "./mod-materias/mod-materias.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import {ModProfessorModule} from "./mod-professor/mod-professor.module";
     ModHomeModule,
     ModUserModule,
     ModScheduleModule,
-    ModProfessorModule
+    ModProfessorModule,
+    ModRoomModule,
+    ModMateriasModule
   ],
   providers: [MessageService, DatePipe],
   bootstrap: [AppComponent]

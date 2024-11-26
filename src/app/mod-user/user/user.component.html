@@ -1,6 +1,11 @@
 <p-toast></p-toast>
 
 <p-card>
+  <ng-template pTemplate="header">
+    <div class="flex align-content-center justify-content-center">
+      <h1>Gestion de Usuarios</h1>
+    </div>
+  </ng-template>
   <p-button label="Agregar Nuevo Usuario" [routerLink]="['/new-user']" severity="success"></p-button>
 </p-card>
 
