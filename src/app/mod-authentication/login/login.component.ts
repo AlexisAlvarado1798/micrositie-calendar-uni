@@ -33,9 +33,9 @@ export class LoginComponent {
       response => {
         console.log("logueado")
         this.messageService.add({severity: 'success', life: 10 * 500, summary: 'Information', detail: 'Autenticado'})
+        setTimeout(()=> {this.router.navigate(["home"]); }, 20 * 100 );
       }, error => {
         console.log("no fue posible el loguarse: ", error.error.message)
-        this.router.navigate(["home"])
         this.messageService.add({severity: 'error', life: 10 * 500, summary: 'error', detail: 'Error al autenticarse: ' + error.error.message})
       }
     )

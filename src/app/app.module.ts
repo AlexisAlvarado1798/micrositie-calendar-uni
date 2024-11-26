@@ -11,6 +11,7 @@ import {ModHomeModule} from "./mod-home/mod-home.module";
 import {ModUserModule} from "./mod-user/mod-user.module";
 import {ModScheduleModule} from "./mod-schedule/mod-schedule.module";
 import {DatePipe} from "@angular/common";
+import {ModProfessorModule} from "./mod-professor/mod-professor.module";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {DatePipe} from "@angular/common";
     ModCoreModule,
     ModHomeModule,
     ModUserModule,
-    ModScheduleModule
+    ModScheduleModule,
+    ModProfessorModule
   ],
   providers: [MessageService, DatePipe],
   bootstrap: [AppComponent]
